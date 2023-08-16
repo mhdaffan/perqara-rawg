@@ -1,20 +1,24 @@
 PODS:
+  - Kingfisher (5.2.0)
   - netfox (1.19.0)
   - SnapKit (5.0.1)
 
 DEPENDENCIES:
+  - Kingfisher (= 5.2)
   - netfox (= 1.19.0)
   - SnapKit (= 5.0.1)
 
 SPEC REPOS:
   trunk:
+    - Kingfisher
     - netfox
     - SnapKit
 
 SPEC CHECKSUMS:
+  Kingfisher: 07067cfacf371117330dceb4b4b8f5c4b691ab42
   netfox: efeec1d23406df6cd605212f09a40957bb5654eb
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: b70c715d0a7507f17bd9b084031892a0fdb1b80d
+PODFILE CHECKSUM: fa2514b80e33a375189275247b75511659cc8919
 
 COCOAPODS: 1.12.1

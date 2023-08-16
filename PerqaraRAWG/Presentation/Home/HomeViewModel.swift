@@ -28,4 +28,8 @@ final class HomeViewModel: BaseViewModel {
         }
     }
     
+    func resetGamesList() {
+        gamesList = GamesListModel(page: 1, games: [])
+    }
+    
 }

@@ -9,6 +9,7 @@ import UIKit
 
 extension UIImage {
     
-    static let ic_home = UIImage(named: "ic_home")
+    static let icHome = UIImage(named: "ic_home")
+    static let icStar = UIImage(named: "ic_star")
     
 }

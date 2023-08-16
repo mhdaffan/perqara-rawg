@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 final class HomeViewController: ViewController {
     
@@ -14,6 +15,13 @@ final class HomeViewController: ViewController {
         $0.hidesNavigationBarDuringPresentation = false
         $0.searchBar.placeholder = "Search"
         $0.searchBar.delegate = self
+    }
+    private(set) lazy var tableView = UITableView().then {
+        $0.backgroundColor = .white
+        $0.separatorStyle = .none
+        $0.register(cell: GameItemTableViewCell.self)
+        $0.delegate = self
+        $0.dataSource = self
     }
     
     private let viewModel: HomeViewModel
@@ -43,15 +51,20 @@ final class HomeViewController: ViewController {
         navigationController?.navigationBar.backgroundColor = .white
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
+        
+        view.addSubview(tableView)
+        tableView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
     }
     
     private func observeClosures() {
         viewModel.refreshData = { [weak self] in
-            print("home success")
+            self?.tableView.reloadData()
         }
         
-        viewModel.onError = { [weak self] error in
-            print("home error")
+        viewModel.onError = { [weak self] _ in
+            self?.showErrorAlert(message: "Terjadi Kesalahan, Silahkan Coba Lagi")
         }
     }
     
@@ -61,6 +74,36 @@ extension HomeViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
        
+    }
+    
+}
+
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("home tapped")
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.gamesList.games.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(for: indexPath, cell: GameItemTableViewCell.self)
+        let cellModel = viewModel.gamesList.games[indexPath.row]
+        
+        cell.selectionStyle = .none
+        cell.updateUI(
+            imageUrl: cellModel.backgroundImage,
+            title: cellModel.name,
+            releaseDate: cellModel.released,
+            rating: String(cellModel.rating))
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
     
 }

@@ -13,7 +13,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     
     private let homeViewController = HomeScreen.build().then {
         $0.title = "Games For You"
-        $0.tabBarItem = UITabBarItem(title: "Home", image: .ic_home, tag: 0)
+        $0.tabBarItem = UITabBarItem(title: "Home", image: .icHome, tag: 0)
     }
     
     override func viewDidLoad() {
