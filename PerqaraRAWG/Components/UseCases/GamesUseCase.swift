@@ -7,6 +7,7 @@
 
 protocol GamesUseCase {
     func fetchGamesList(page: Int, completion: @escaping (Result<GamesListModel, Error>) -> Void)
+    func fetchGameDetail(id: Int, completion: @escaping (Result<GameDetailModel, Error>) -> Void)
 }
 
 struct GamesUseCaseImpl: GamesUseCase {
@@ -27,6 +28,10 @@ struct GamesUseCaseImpl: GamesUseCase {
                 completion(.failure(error))
             }
         }
+    }
+    
+    func fetchGameDetail(id: Int, completion: @escaping (Result<GameDetailModel, Error>) -> Void) {
+        gamesRepository.fetchGameDetail(id: id, completion: completion)
     }
     
 }

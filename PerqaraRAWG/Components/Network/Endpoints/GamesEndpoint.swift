@@ -18,4 +18,8 @@ struct GamesEndpoint {
         )
     }
     
+    static func gameDetail(id: Int) -> DataEndpoint<GameDetailModel> {
+        return DataEndpoint(path: "api/games/\(id)")
+    }
+    
 }

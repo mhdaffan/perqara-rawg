@@ -9,6 +9,7 @@ import Foundation
 
 protocol GamesRepository {
     func fetchGamesList(page: Int, completion: @escaping (Result<GamesListModel, Error>) -> Void)
+    func fetchGameDetail(id: Int, completion: @escaping (Result<GameDetailModel, Error>) -> Void)
 }
 
 struct GamesRepositoryImpl: GamesRepository {
@@ -17,6 +18,10 @@ struct GamesRepositoryImpl: GamesRepository {
     
     func fetchGamesList(page: Int, completion: @escaping (Result<GamesListModel, Error>) -> Void) {
         dataTransferService.request(with: GamesEndpoint.gamesList(page: page), completion: completion)
+    }
+    
+    func fetchGameDetail(id: Int, completion: @escaping (Result<GameDetailModel, Error>) -> Void) {
+        dataTransferService.request(with: GamesEndpoint.gameDetail(id: id), completion: completion)
     }
     
 }
