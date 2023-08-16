@@ -11,7 +11,12 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     
     static let shared = TabBarController()
     
-    private let homeViewController = HomeScreen.build()
+    private let homeViewController = HomeScreen.build().then {
+        let home = UITabBarItem()
+        home.image = .ic_home
+        $0.tabBarItem = home
+        $0.title = "Home"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,19 +25,15 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         tabBar.layer.borderWidth = 1
         tabBar.backgroundColor = .white
         tabBar.backgroundImage = UIImage()
-        tabBar.tintColor = .blue
-        let unselectedFontAttribute = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13)]
+        tabBar.tintColor = .darkGray
+        
+        let unselectedFontAttribute = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 13)]
         UITabBarItem.appearance().setTitleTextAttributes(unselectedFontAttribute, for: .normal)
         
         configureViewControllers()
     }
     
     private func configureViewControllers() {
-        let home = UITabBarItem()
-        home.image = .ic_home
-        homeViewController.tabBarItem = home
-        homeViewController.title = "Home"
-        
         viewControllers = [homeViewController]
         selectedIndex = 0
     }
