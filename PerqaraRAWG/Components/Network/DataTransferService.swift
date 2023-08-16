@@ -16,15 +16,15 @@ enum DataTransferError: Error {
 final class DataEndpoint<T: Any>: Endpoint { }
 
 protocol DataTransferService {
-    func request<T: Decodable>(with endpoint: DataEndpoint<T>, completion: @escaping (Result<T, Error>) -> Void) -> URLSessionDataTask?
+    func request<T: Decodable>(with endpoint: DataEndpoint<T>, completion: @escaping (Result<T, Error>) -> Void)
 }
 
 class DataTransferServiceImpl: DataTransferService {
     
     @Injected(\.networkService) var networkService: NetworkService
     
-    func request<T: Decodable>(with endpoint: DataEndpoint<T>, completion: @escaping (Result<T, Error>) -> Void) -> URLSessionDataTask? {
-        return networkService.request(endpoint: endpoint) { result in
+    func request<T: Decodable>(with endpoint: DataEndpoint<T>, completion: @escaping (Result<T, Error>) -> Void) {
+        networkService.request(endpoint: endpoint) { result in
             switch result {
             case .success(let responseData):
                 guard let responseData = responseData else {

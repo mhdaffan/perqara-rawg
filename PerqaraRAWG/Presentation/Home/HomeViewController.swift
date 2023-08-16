@@ -9,6 +9,13 @@ import UIKit
 
 final class HomeViewController: ViewController {
     
+    private(set) lazy var searchController = UISearchController().then {
+        $0.obscuresBackgroundDuringPresentation = false
+        $0.hidesNavigationBarDuringPresentation = false
+        $0.searchBar.placeholder = "Search"
+        $0.searchBar.delegate = self
+    }
+    
     private let viewModel: HomeViewModel
     
     init(viewModel: HomeViewModel) {
@@ -23,10 +30,37 @@ final class HomeViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        observeClosures()
+        viewModel.getGamesList()
     }
     
     private func configureUI() {
-        view.backgroundColor = .red
+        view.backgroundColor = .white
+        navigationController?.navigationBar.tintColor = .black
+        navigationController?.navigationBar.titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: UIColor.black
+        ]
+        navigationController?.navigationBar.backgroundColor = .white
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+    }
+    
+    private func observeClosures() {
+        viewModel.refreshData = { [weak self] in
+            print("home success")
+        }
+        
+        viewModel.onError = { [weak self] error in
+            print("home error")
+        }
+    }
+    
+}
+
+extension HomeViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+       
     }
     
 }

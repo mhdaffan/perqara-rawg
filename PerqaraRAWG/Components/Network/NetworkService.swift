@@ -30,6 +30,7 @@ extension NetworkError {
 }
 
 protocol NetworkService {
+    @discardableResult
     func request(endpoint: Requestable, completion: @escaping (Result<Data?, NetworkError>) -> Void) -> URLSessionDataTask?
 }
 

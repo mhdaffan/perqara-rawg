@@ -6,11 +6,13 @@
 //
 
 struct GamesListModel: Codable {
-    let count: Int
-    let results: [GameModel]
+    var page: Int = 1
+    var games: [GameModel]
+    var next: String?
     
     enum CodingKeys: String, CodingKey {
-        case count, results
+        case next
+        case games = "results"
     }
 }
 

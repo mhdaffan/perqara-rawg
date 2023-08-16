@@ -7,4 +7,7 @@
 
 class BaseViewModel {
     
+    var onError: ((Error) -> Void)?
+    var refreshData: (() -> Void)?
+    
 }

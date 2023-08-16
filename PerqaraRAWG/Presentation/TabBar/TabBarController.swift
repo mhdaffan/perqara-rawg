@@ -12,10 +12,8 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     static let shared = TabBarController()
     
     private let homeViewController = HomeScreen.build().then {
-        let home = UITabBarItem()
-        home.image = .ic_home
-        $0.tabBarItem = home
-        $0.title = "Home"
+        $0.title = "Games For You"
+        $0.tabBarItem = UITabBarItem(title: "Home", image: .ic_home, tag: 0)
     }
     
     override func viewDidLoad() {
@@ -34,7 +32,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     }
     
     private func configureViewControllers() {
-        viewControllers = [homeViewController]
+        viewControllers = [UINavigationController(rootViewController: homeViewController)]
         selectedIndex = 0
     }
     
