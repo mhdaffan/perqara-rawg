@@ -7,6 +7,7 @@ target 'PerqaraRAWG' do
 
   # Pods for PerqaraRAWG
   pod 'SnapKit', '5.0.1'
+  pod 'netfox', '1.19.0'
   
   target 'PerqaraRAWGTests' do
     inherit! :search_paths

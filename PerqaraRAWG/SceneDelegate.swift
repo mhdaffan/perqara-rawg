@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import netfox
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -20,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else {
             return
         }
-        
+        NFX.sharedInstance().start()
         let tabBarController = TabBarController.shared
         window = UIWindow(windowScene: windowScene)
         window?.makeKeyAndVisible()
