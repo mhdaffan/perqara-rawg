@@ -21,22 +21,11 @@ extension UIView {
         }
     }
     
-}
-extension UITabBarController {
-    
-    func setTabBarVisible(visible: Bool, animated: Bool) {
-        if (tabBarIsVisible() == visible) { return }
-        let frame = self.tabBar.frame
-        let height = frame.size.height
-        let offsetY = (visible ? -height : height)
-        UIView.animate(withDuration: animated ? 0.3 : 0.0) {
-            self.tabBar.frame = frame.offsetBy(dx: 0, dy: offsetY)
-            self.tabBar.isHidden = !visible
-        }
-    }
-    
-    func tabBarIsVisible() -> Bool {
-        return self.tabBar.frame.origin.y < self.view.frame.maxY
+    func getSizeRatio(targetWidth: CGFloat, width: CGFloat, height: CGFloat) -> CGSize {
+        let ratio: CGFloat = width / height
+        let newHeight = targetWidth / ratio
+        
+        return CGSize(width: targetWidth, height: newHeight)
     }
     
 }

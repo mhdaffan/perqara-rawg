@@ -15,6 +15,10 @@ struct GameDetailModel: Codable {
     let playtime: Int
     let publishers: [PublisherModel]
     
+    var publisherString: String {
+        publishers.map { $0.name }.joined(separator: ", ")
+    }
+    
     enum CodingKeys: String, CodingKey {
         case id, name, released, rating, playtime, publishers
         case descriptionRaw = "description_raw"

@@ -14,8 +14,9 @@ final class GameDetailViewController: ViewController {
         $0.refreshControl = self.refreshControl
         $0.translatesAutoresizingMaskIntoConstraints = false
     }
-    let contentView = UIView().then {
+    let contentView = GameDetailView().then {
         $0.backgroundColor = .white
+        $0.isHidden = true
     }
     
     private let viewModel: GameDetailViewModel
@@ -36,6 +37,15 @@ final class GameDetailViewController: ViewController {
         fetchGameDetail()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        addRightBarButtonItem(image: .icLove, tintColor: .black, action: #selector(tapFavoriteButton))
+    }
+    
+    override func refresh() {
+        viewModel.fetchGameDetail()
+    }
+    
     private func configureUI() {
         title = "Detail"
         view.addSubview(scrollView)
@@ -53,7 +63,10 @@ final class GameDetailViewController: ViewController {
     private func observeClosures() {
         viewModel.refreshData = { [weak self] in
             self?.endRefreshing()
-            print("detail success")
+            if let game = self?.viewModel.gameDetail {
+                self?.contentView.updateUI(game: game)
+                self?.contentView.isHidden = false
+            }
         }
         
         viewModel.onError = { [weak self] _ in
@@ -67,7 +80,9 @@ final class GameDetailViewController: ViewController {
         viewModel.fetchGameDetail()
     }
     
-    override func refresh() {
-        viewModel.fetchGameDetail()
+    @objc func tapFavoriteButton() {
+        removeRightBarButtonItem()
+        addRightBarButtonItem(image: .icLove, tintColor: .yellow, action: #selector(tapFavoriteButton))
     }
+    
 }
