@@ -39,7 +39,7 @@ final class GameDetailViewController: ViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        addRightBarButtonItem(image: .icLove, tintColor: .black, action: #selector(tapFavoriteButton))
+        addRightBarButtonItem(image: .icLoveOutlined, tintColor: .black, action: #selector(tapFavoriteButton))
     }
     
     override func refresh() {
@@ -82,7 +82,7 @@ final class GameDetailViewController: ViewController {
     
     @objc func tapFavoriteButton() {
         removeRightBarButtonItem()
-        addRightBarButtonItem(image: .icLove, tintColor: .yellow, action: #selector(tapFavoriteButton))
+        addRightBarButtonItem(image: .icLove, tintColor: .black, action: #selector(tapFavoriteButton))
     }
     
 }

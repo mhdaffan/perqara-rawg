@@ -13,5 +13,6 @@ extension UIImage {
     static let icStar = UIImage(named: "ic_star")
     static let icJoystick = UIImage(named: "ic_joystick")
     static let icLove = UIImage(named: "ic_love")
+    static let icLoveOutlined = UIImage(named: "ic_love_outlined")
     
 }

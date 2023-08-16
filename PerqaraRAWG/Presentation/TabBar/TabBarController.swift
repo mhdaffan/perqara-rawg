@@ -16,6 +16,11 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         $0.tabBarItem = UITabBarItem(title: "Home", image: .icHome, tag: 0)
     }
     
+    private let favoriteViewController = FavoriteScreen.build().then {
+        $0.title = "Favorite Games"
+        $0.tabBarItem = UITabBarItem(title: "Favorite", image: .icLoveOutlined, tag: 1)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
@@ -32,7 +37,9 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     }
     
     private func configureViewControllers() {
-        viewControllers = [UINavigationController(rootViewController: homeViewController)]
+        viewControllers = [
+            UINavigationController(rootViewController: homeViewController),
+            UINavigationController(rootViewController: favoriteViewController)]
         selectedIndex = 0
     }
     

@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  FavoriteViewController.swift
 //  PerqaraRAWG
 //
 //  Created by Muhammad Affan on 16/08/23.
@@ -8,27 +8,21 @@
 import UIKit
 import SnapKit
 
-final class HomeViewController: ViewController {
+final class FavoriteViewController: ViewController {
     
-    private(set) lazy var searchController = UISearchController().then {
-        $0.obscuresBackgroundDuringPresentation = false
-        $0.hidesNavigationBarDuringPresentation = false
-        $0.searchBar.placeholder = "Search"
-        $0.searchBar.delegate = self
+    private let viewModel: FavoriteViewModel
+    
+    init(viewModel: FavoriteViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
     }
+    
     private(set) lazy var tableView = UITableView().then {
         $0.backgroundColor = .white
         $0.separatorStyle = .none
         $0.register(cell: GameItemTableViewCell.self)
         $0.delegate = self
         $0.dataSource = self
-    }
-    
-    private let viewModel: HomeViewModel
-    
-    init(viewModel: HomeViewModel) {
-        self.viewModel = viewModel
-        super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
@@ -39,7 +33,6 @@ final class HomeViewController: ViewController {
         super.viewDidLoad()
         configureUI()
         observeClosures()
-        viewModel.getGamesList()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,7 +46,6 @@ final class HomeViewController: ViewController {
             NSAttributedString.Key.foregroundColor: UIColor.black
         ]
         navigationController?.navigationBar.backgroundColor = .white
-        navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         
         view.addSubview(tableView)
@@ -74,29 +66,7 @@ final class HomeViewController: ViewController {
     
 }
 
-extension HomeViewController: UISearchBarDelegate {
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        if let text = searchBar.text {
-            viewModel.resetData()
-            tableView.reloadData()
-            viewModel.searchGames(keyword: text)
-        }
-    }
-    
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchText.isEmpty {
-            viewModel.switchToGameList()
-        }
-    }
-    
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        viewModel.switchToGameList()
-    }
-    
-}
-
-extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+extension FavoriteViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = GameDetailScreen.build(id: viewModel.data.games[indexPath.row].id)

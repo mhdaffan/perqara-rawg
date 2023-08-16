@@ -10,7 +10,7 @@ final class HomeViewModel: BaseViewModel {
     @Injected(\.gamesUseCase) var gamesUseCase: GamesUseCase
     
     var data: GamesListModel = GamesListModel(page: 1, games: [])
-    var gamesList: GamesListModel = GamesListModel(page: 1, games: [])
+    private var gamesList: GamesListModel = GamesListModel(page: 1, games: [])
     
     func getGamesList() {
         guard gamesList.page > 0 else {
