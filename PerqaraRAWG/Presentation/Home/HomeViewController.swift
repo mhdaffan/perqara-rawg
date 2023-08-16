@@ -43,7 +43,6 @@ final class HomeViewController: ViewController {
     }
     
     private func configureUI() {
-        view.backgroundColor = .white
         navigationController?.navigationBar.tintColor = .black
         navigationController?.navigationBar.titleTextAttributes = [
             NSAttributedString.Key.foregroundColor: UIColor.black
@@ -81,7 +80,8 @@ extension HomeViewController: UISearchBarDelegate {
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("home tapped")
+        let vc = GameDetailScreen.build(id: viewModel.gamesList.games[indexPath.row].id)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
