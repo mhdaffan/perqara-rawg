@@ -21,11 +21,7 @@ protocol DataTransferService {
 
 class DataTransferServiceImpl: DataTransferService {
     
-    private let networkService: NetworkService
-    
-    init(with networkService: NetworkService) {
-        self.networkService = networkService
-    }
+    @Injected(\.networkService) var networkService: NetworkService
     
     func request<T: Decodable>(with endpoint: DataEndpoint<T>, completion: @escaping (Result<T, Error>) -> Void) -> URLSessionDataTask? {
         return networkService.request(endpoint: endpoint) { result in

@@ -10,6 +10,8 @@
 		11A10157C716562A2532A8FA /* Pods_PerqaraRAWG_PerqaraRAWGUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958D4BF0804D6172C008DAAC /* Pods_PerqaraRAWG_PerqaraRAWGUITests.framework */; };
 		1FE399B688BADCC32BF58F52 /* Pods_PerqaraRAWGTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D4C35621CE04209B64688EC /* Pods_PerqaraRAWGTests.framework */; };
 		2BEBEBF6A95E53E8698243C6 /* Pods_PerqaraRAWG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677B2924754F69C0EB8BA8C2 /* Pods_PerqaraRAWG.framework */; };
+		362E4F9E2A8CA19500FA2252 /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362E4F9D2A8CA19500FA2252 /* DependencyInjection.swift */; };
+		362E4FA22A8CA21700FA2252 /* NetworkInjectionKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362E4FA12A8CA21700FA2252 /* NetworkInjectionKey.swift */; };
 		364ACCAC2A8BC5C40089828F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364ACCAB2A8BC5C40089828F /* AppDelegate.swift */; };
 		364ACCAE2A8BC5C40089828F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364ACCAD2A8BC5C40089828F /* SceneDelegate.swift */; };
 		364ACCB02A8BC5C40089828F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364ACCAF2A8BC5C40089828F /* ViewController.swift */; };
@@ -54,6 +56,8 @@
 /* Begin PBXFileReference section */
 		0F05D4EB982B808348111A27 /* Pods-PerqaraRAWG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PerqaraRAWG.release.xcconfig"; path = "Target Support Files/Pods-PerqaraRAWG/Pods-PerqaraRAWG.release.xcconfig"; sourceTree = "<group>"; };
 		2D4C35621CE04209B64688EC /* Pods_PerqaraRAWGTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PerqaraRAWGTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		362E4F9D2A8CA19500FA2252 /* DependencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjection.swift; sourceTree = "<group>"; };
+		362E4FA12A8CA21700FA2252 /* NetworkInjectionKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInjectionKey.swift; sourceTree = "<group>"; };
 		364ACCA82A8BC5C40089828F /* PerqaraRAWG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerqaraRAWG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		364ACCAB2A8BC5C40089828F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		364ACCAD2A8BC5C40089828F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -289,6 +293,8 @@
 		364ACD3B2A8C6A840089828F /* Dependency Injection */ = {
 			isa = PBXGroup;
 			children = (
+				362E4F9D2A8CA19500FA2252 /* DependencyInjection.swift */,
+				362E4FA12A8CA21700FA2252 /* NetworkInjectionKey.swift */,
 			);
 			path = "Dependency Injection";
 			sourceTree = "<group>";
@@ -565,6 +571,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				364ACD472A8C87D40089828F /* Endpoint.swift in Sources */,
+				362E4FA22A8CA21700FA2252 /* NetworkInjectionKey.swift in Sources */,
 				364ACCB02A8BC5C40089828F /* ViewController.swift in Sources */,
 				364ACCB62A8BC5C40089828F /* PerqaraRAWG.xcdatamodeld in Sources */,
 				364ACD3F2A8C6AEE0089828F /* UIViewExtension.swift in Sources */,
@@ -578,6 +585,7 @@
 				364ACCF12A8C5AAC0089828F /* HomeScreen.swift in Sources */,
 				364ACCE32A8BC9350089828F /* TabBarController.swift in Sources */,
 				364ACCAE2A8BC5C40089828F /* SceneDelegate.swift in Sources */,
+				362E4F9E2A8CA19500FA2252 /* DependencyInjection.swift in Sources */,
 				364ACD4A2A8C8BC60089828F /* GamesEndpoint.swift in Sources */,
 				364ACD452A8C87CD0089828F /* NetworkService.swift in Sources */,
 				364ACCE82A8C599F0089828F /* HomeViewController.swift in Sources */,

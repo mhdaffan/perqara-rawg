@@ -54,18 +54,12 @@ extension URLSession: NetworkSession {
 
 class NetworkServiceImpl: NetworkService {
     
-    private let session: NetworkSession
-    private let config: NetworkConfigurable
-    
-    init(session: NetworkSession, config: NetworkConfigurable) {
-        self.session = session
-        self.config = config
-    }
+    @Injected(\.networkConfiguration) var config: NetworkConfigurable
     
     func request(endpoint: Requestable, completion: @escaping (Result<Data?, NetworkError>) -> Void) -> URLSessionDataTask? {
         do {
             let urlRequest = try endpoint.urlRequest(with: config)
-            let sessionDataTask = session.loadData(from: urlRequest) { (data, response, requestError) in
+            let sessionDataTask = URLSession.shared.loadData(from: urlRequest) { (data, response, requestError) in
                 var error: NetworkError
                 if let requestError = requestError {
                     if let response = response as? HTTPURLResponse, (400..<600).contains(response.statusCode) {

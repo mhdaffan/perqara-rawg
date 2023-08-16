@@ -53,7 +53,7 @@ enum RequestGenerationError: Error {
 
 extension Requestable {
     
-    func url(with config: NetworkConfigurable) throws -> URL {
+    func configureUrl(with config: NetworkConfigurable) throws -> URL {
         let baseURL = config.baseURL.absoluteString.last != "/" ? config.baseURL.absoluteString + "/" : config.baseURL.absoluteString
         let endpoint = isFullPath ? path : baseURL.appending(path)
         
@@ -78,8 +78,9 @@ extension Requestable {
         return url
     }
     
+    
     func urlRequest(with config: NetworkConfigurable) throws -> URLRequest {
-        let url = try self.url(with: config)
+        let url = try self.configureUrl(with: config)
         var urlRequest = URLRequest(url: url)
         var allHeaders: [String: String] = config.headers
         headerParamaters.forEach({ allHeaders.updateValue($1, forKey: $0) })
@@ -110,7 +111,7 @@ protocol NetworkConfigurable {
     var queryParameters: [String: String] { get }
 }
 
-struct NetworkConfigurableImpl: NetworkConfigurable {
+struct NetworkConfiguration: NetworkConfigurable {
     let baseURL: URL
     let headers: [String: String]
     let apiKey: String?
