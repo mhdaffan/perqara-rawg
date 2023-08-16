@@ -9,7 +9,7 @@ struct GameDetailModel: Codable {
     let id: Int
     let name: String
     let descriptionRaw: String
-    let released: String
+    let released: String?
     let backgroundImage: String
     let rating: Double
     let playtime: Int

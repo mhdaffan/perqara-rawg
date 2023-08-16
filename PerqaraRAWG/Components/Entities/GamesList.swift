@@ -20,8 +20,8 @@ struct GameModel: Codable {
     let id: Int
     let slug: String
     let name: String
-    let released: String
-    let backgroundImage: String
+    let released: String?
+    let backgroundImage: String?
     let rating: Double
     
     enum CodingKeys: String, CodingKey {

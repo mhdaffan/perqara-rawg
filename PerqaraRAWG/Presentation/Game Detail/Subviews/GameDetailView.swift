@@ -101,7 +101,7 @@ final class GameDetailView: UIView {
         imageView.setImageURL(urlString: game.backgroundImage, placeholder: "")
         publisherLabel.text = game.publisherString
         titleLabel.text = game.name
-        releaseLabel.text = "Released date " + game.released
+        releaseLabel.text = "Released date " + (game.released ?? "")
         ratingLabel.text = String(game.rating)
         totalPlayLabel.text = String(game.playtime) + " played"
         descriptionLabel.text = game.descriptionRaw

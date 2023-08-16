@@ -77,7 +77,21 @@ final class HomeViewController: ViewController {
 extension HomeViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-       
+        if let text = searchBar.text {
+            viewModel.resetData()
+            tableView.reloadData()
+            viewModel.searchGames(keyword: text)
+        }
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty {
+            viewModel.switchToGameList()
+        }
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        viewModel.switchToGameList()
     }
     
 }
@@ -90,18 +104,18 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.gamesList.games.count
+        return viewModel.data.games.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath, cell: GameItemTableViewCell.self)
-        let cellModel = viewModel.gamesList.games[indexPath.row]
+        let cellModel = viewModel.data.games[indexPath.row]
         
         cell.selectionStyle = .none
         cell.updateUI(
-            imageUrl: cellModel.backgroundImage,
+            imageUrl: cellModel.backgroundImage ?? "",
             title: cellModel.name,
-            releaseDate: cellModel.released,
+            releaseDate: cellModel.released ?? String(),
             rating: String(cellModel.rating))
         
         return cell
