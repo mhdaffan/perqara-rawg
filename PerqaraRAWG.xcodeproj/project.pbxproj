@@ -1,0 +1,832 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		11A10157C716562A2532A8FA /* Pods_PerqaraRAWG_PerqaraRAWGUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958D4BF0804D6172C008DAAC /* Pods_PerqaraRAWG_PerqaraRAWGUITests.framework */; };
+		1FE399B688BADCC32BF58F52 /* Pods_PerqaraRAWGTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D4C35621CE04209B64688EC /* Pods_PerqaraRAWGTests.framework */; };
+		2BEBEBF6A95E53E8698243C6 /* Pods_PerqaraRAWG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 677B2924754F69C0EB8BA8C2 /* Pods_PerqaraRAWG.framework */; };
+		364ACCAC2A8BC5C40089828F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364ACCAB2A8BC5C40089828F /* AppDelegate.swift */; };
+		364ACCAE2A8BC5C40089828F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364ACCAD2A8BC5C40089828F /* SceneDelegate.swift */; };
+		364ACCB02A8BC5C40089828F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364ACCAF2A8BC5C40089828F /* ViewController.swift */; };
+		364ACCB62A8BC5C40089828F /* PerqaraRAWG.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 364ACCB42A8BC5C40089828F /* PerqaraRAWG.xcdatamodeld */; };
+		364ACCB82A8BC5C50089828F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 364ACCB72A8BC5C50089828F /* Assets.xcassets */; };
+		364ACCBB2A8BC5C50089828F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 364ACCB92A8BC5C50089828F /* LaunchScreen.storyboard */; };
+		364ACCC62A8BC5C50089828F /* PerqaraRAWGTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364ACCC52A8BC5C50089828F /* PerqaraRAWGTests.swift */; };
+		364ACCD02A8BC5C50089828F /* PerqaraRAWGUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364ACCCF2A8BC5C50089828F /* PerqaraRAWGUITests.swift */; };
+		364ACCD22A8BC5C50089828F /* PerqaraRAWGUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364ACCD12A8BC5C50089828F /* PerqaraRAWGUITestsLaunchTests.swift */; };
+		364ACCE32A8BC9350089828F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364ACCE22A8BC9350089828F /* TabBarController.swift */; };
+		364ACCE82A8C599F0089828F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364ACCE72A8C599F0089828F /* HomeViewController.swift */; };
+		364ACCEA2A8C59A70089828F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364ACCE92A8C59A70089828F /* HomeViewModel.swift */; };
+		364ACCEF2A8C59E00089828F /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364ACCEE2A8C59E00089828F /* BaseViewModel.swift */; };
+		364ACCF12A8C5AAC0089828F /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364ACCF02A8C5AAC0089828F /* HomeScreen.swift */; };
+		364ACCF52A8C5C800089828F /* ImageConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364ACCF42A8C5C800089828F /* ImageConstant.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		364ACCC22A8BC5C50089828F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 364ACCA02A8BC5C40089828F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 364ACCA72A8BC5C40089828F;
+			remoteInfo = PerqaraRAWG;
+		};
+		364ACCCC2A8BC5C50089828F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 364ACCA02A8BC5C40089828F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 364ACCA72A8BC5C40089828F;
+			remoteInfo = PerqaraRAWG;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0F05D4EB982B808348111A27 /* Pods-PerqaraRAWG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PerqaraRAWG.release.xcconfig"; path = "Target Support Files/Pods-PerqaraRAWG/Pods-PerqaraRAWG.release.xcconfig"; sourceTree = "<group>"; };
+		2D4C35621CE04209B64688EC /* Pods_PerqaraRAWGTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PerqaraRAWGTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		364ACCA82A8BC5C40089828F /* PerqaraRAWG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerqaraRAWG.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		364ACCAB2A8BC5C40089828F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		364ACCAD2A8BC5C40089828F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		364ACCAF2A8BC5C40089828F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		364ACCB52A8BC5C40089828F /* PerqaraRAWG.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PerqaraRAWG.xcdatamodel; sourceTree = "<group>"; };
+		364ACCB72A8BC5C50089828F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		364ACCBA2A8BC5C50089828F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		364ACCBC2A8BC5C50089828F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		364ACCC12A8BC5C50089828F /* PerqaraRAWGTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PerqaraRAWGTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		364ACCC52A8BC5C50089828F /* PerqaraRAWGTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerqaraRAWGTests.swift; sourceTree = "<group>"; };
+		364ACCCB2A8BC5C50089828F /* PerqaraRAWGUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PerqaraRAWGUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		364ACCCF2A8BC5C50089828F /* PerqaraRAWGUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerqaraRAWGUITests.swift; sourceTree = "<group>"; };
+		364ACCD12A8BC5C50089828F /* PerqaraRAWGUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerqaraRAWGUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		364ACCE22A8BC9350089828F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		364ACCE72A8C599F0089828F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		364ACCE92A8C59A70089828F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		364ACCEE2A8C59E00089828F /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		364ACCF02A8C5AAC0089828F /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		364ACCF42A8C5C800089828F /* ImageConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageConstant.swift; sourceTree = "<group>"; };
+		587787620287D6541987B103 /* Pods-PerqaraRAWGTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PerqaraRAWGTests.debug.xcconfig"; path = "Target Support Files/Pods-PerqaraRAWGTests/Pods-PerqaraRAWGTests.debug.xcconfig"; sourceTree = "<group>"; };
+		677B2924754F69C0EB8BA8C2 /* Pods_PerqaraRAWG.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PerqaraRAWG.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DE5A4C4F0CBC6A3E0ADCBFD /* Pods-PerqaraRAWG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PerqaraRAWG.debug.xcconfig"; path = "Target Support Files/Pods-PerqaraRAWG/Pods-PerqaraRAWG.debug.xcconfig"; sourceTree = "<group>"; };
+		958D4BF0804D6172C008DAAC /* Pods_PerqaraRAWG_PerqaraRAWGUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PerqaraRAWG_PerqaraRAWGUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7666DC9FED6D11D4F2A2BC6 /* Pods-PerqaraRAWG-PerqaraRAWGUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PerqaraRAWG-PerqaraRAWGUITests.release.xcconfig"; path = "Target Support Files/Pods-PerqaraRAWG-PerqaraRAWGUITests/Pods-PerqaraRAWG-PerqaraRAWGUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C3688D240EC6C0059314EE99 /* Pods-PerqaraRAWG-PerqaraRAWGUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PerqaraRAWG-PerqaraRAWGUITests.debug.xcconfig"; path = "Target Support Files/Pods-PerqaraRAWG-PerqaraRAWGUITests/Pods-PerqaraRAWG-PerqaraRAWGUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FEB2DE17453F93E69691D6C9 /* Pods-PerqaraRAWGTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PerqaraRAWGTests.release.xcconfig"; path = "Target Support Files/Pods-PerqaraRAWGTests/Pods-PerqaraRAWGTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		364ACCA52A8BC5C40089828F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BEBEBF6A95E53E8698243C6 /* Pods_PerqaraRAWG.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		364ACCBE2A8BC5C50089828F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FE399B688BADCC32BF58F52 /* Pods_PerqaraRAWGTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		364ACCC82A8BC5C50089828F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11A10157C716562A2532A8FA /* Pods_PerqaraRAWG_PerqaraRAWGUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0FA9403618F764951272D511 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6DE5A4C4F0CBC6A3E0ADCBFD /* Pods-PerqaraRAWG.debug.xcconfig */,
+				0F05D4EB982B808348111A27 /* Pods-PerqaraRAWG.release.xcconfig */,
+				C3688D240EC6C0059314EE99 /* Pods-PerqaraRAWG-PerqaraRAWGUITests.debug.xcconfig */,
+				B7666DC9FED6D11D4F2A2BC6 /* Pods-PerqaraRAWG-PerqaraRAWGUITests.release.xcconfig */,
+				587787620287D6541987B103 /* Pods-PerqaraRAWGTests.debug.xcconfig */,
+				FEB2DE17453F93E69691D6C9 /* Pods-PerqaraRAWGTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		364ACC9F2A8BC5C40089828F = {
+			isa = PBXGroup;
+			children = (
+				364ACCAA2A8BC5C40089828F /* PerqaraRAWG */,
+				364ACCC42A8BC5C50089828F /* PerqaraRAWGTests */,
+				364ACCCE2A8BC5C50089828F /* PerqaraRAWGUITests */,
+				364ACCA92A8BC5C40089828F /* Products */,
+				0FA9403618F764951272D511 /* Pods */,
+				BBD38DF81F6D336AD23CDF92 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		364ACCA92A8BC5C40089828F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				364ACCA82A8BC5C40089828F /* PerqaraRAWG.app */,
+				364ACCC12A8BC5C50089828F /* PerqaraRAWGTests.xctest */,
+				364ACCCB2A8BC5C50089828F /* PerqaraRAWGUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		364ACCAA2A8BC5C40089828F /* PerqaraRAWG */ = {
+			isa = PBXGroup;
+			children = (
+				364ACCF22A8C5C3D0089828F /* Components */,
+				364ACCED2A8C59C40089828F /* Base */,
+				364ACCE52A8C595B0089828F /* Presentation */,
+				364ACCAB2A8BC5C40089828F /* AppDelegate.swift */,
+				364ACCAD2A8BC5C40089828F /* SceneDelegate.swift */,
+				364ACCB72A8BC5C50089828F /* Assets.xcassets */,
+				364ACCB92A8BC5C50089828F /* LaunchScreen.storyboard */,
+				364ACCBC2A8BC5C50089828F /* Info.plist */,
+				364ACCB42A8BC5C40089828F /* PerqaraRAWG.xcdatamodeld */,
+			);
+			path = PerqaraRAWG;
+			sourceTree = "<group>";
+		};
+		364ACCC42A8BC5C50089828F /* PerqaraRAWGTests */ = {
+			isa = PBXGroup;
+			children = (
+				364ACCC52A8BC5C50089828F /* PerqaraRAWGTests.swift */,
+			);
+			path = PerqaraRAWGTests;
+			sourceTree = "<group>";
+		};
+		364ACCCE2A8BC5C50089828F /* PerqaraRAWGUITests */ = {
+			isa = PBXGroup;
+			children = (
+				364ACCCF2A8BC5C50089828F /* PerqaraRAWGUITests.swift */,
+				364ACCD12A8BC5C50089828F /* PerqaraRAWGUITestsLaunchTests.swift */,
+			);
+			path = PerqaraRAWGUITests;
+			sourceTree = "<group>";
+		};
+		364ACCDF2A8BC9120089828F /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				364ACCE22A8BC9350089828F /* TabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		364ACCE52A8C595B0089828F /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				364ACCDF2A8BC9120089828F /* TabBar */,
+				364ACCE62A8C59900089828F /* Home */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		364ACCE62A8C59900089828F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				364ACCF02A8C5AAC0089828F /* HomeScreen.swift */,
+				364ACCE72A8C599F0089828F /* HomeViewController.swift */,
+				364ACCE92A8C59A70089828F /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		364ACCED2A8C59C40089828F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				364ACCAF2A8BC5C40089828F /* ViewController.swift */,
+				364ACCEE2A8C59E00089828F /* BaseViewModel.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		364ACCF22A8C5C3D0089828F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				364ACCF32A8C5C5A0089828F /* Constants */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		364ACCF32A8C5C5A0089828F /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				364ACCF42A8C5C800089828F /* ImageConstant.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		BBD38DF81F6D336AD23CDF92 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				677B2924754F69C0EB8BA8C2 /* Pods_PerqaraRAWG.framework */,
+				958D4BF0804D6172C008DAAC /* Pods_PerqaraRAWG_PerqaraRAWGUITests.framework */,
+				2D4C35621CE04209B64688EC /* Pods_PerqaraRAWGTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		364ACCA72A8BC5C40089828F /* PerqaraRAWG */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 364ACCD52A8BC5C50089828F /* Build configuration list for PBXNativeTarget "PerqaraRAWG" */;
+			buildPhases = (
+				08AD3C136ECF1DBF3AFA8742 /* [CP] Check Pods Manifest.lock */,
+				364ACCA42A8BC5C40089828F /* Sources */,
+				364ACCA52A8BC5C40089828F /* Frameworks */,
+				364ACCA62A8BC5C40089828F /* Resources */,
+				6E0BC89EAC245D789C9D2235 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PerqaraRAWG;
+			productName = PerqaraRAWG;
+			productReference = 364ACCA82A8BC5C40089828F /* PerqaraRAWG.app */;
+			productType = "com.apple.product-type.application";
+		};
+		364ACCC02A8BC5C50089828F /* PerqaraRAWGTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 364ACCD82A8BC5C50089828F /* Build configuration list for PBXNativeTarget "PerqaraRAWGTests" */;
+			buildPhases = (
+				F6FF2244C382F6F67007875A /* [CP] Check Pods Manifest.lock */,
+				364ACCBD2A8BC5C50089828F /* Sources */,
+				364ACCBE2A8BC5C50089828F /* Frameworks */,
+				364ACCBF2A8BC5C50089828F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				364ACCC32A8BC5C50089828F /* PBXTargetDependency */,
+			);
+			name = PerqaraRAWGTests;
+			productName = PerqaraRAWGTests;
+			productReference = 364ACCC12A8BC5C50089828F /* PerqaraRAWGTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		364ACCCA2A8BC5C50089828F /* PerqaraRAWGUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 364ACCDB2A8BC5C50089828F /* Build configuration list for PBXNativeTarget "PerqaraRAWGUITests" */;
+			buildPhases = (
+				CE71D776DF90C508C240E2B2 /* [CP] Check Pods Manifest.lock */,
+				364ACCC72A8BC5C50089828F /* Sources */,
+				364ACCC82A8BC5C50089828F /* Frameworks */,
+				364ACCC92A8BC5C50089828F /* Resources */,
+				29B41CFDD551811967299028 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				364ACCCD2A8BC5C50089828F /* PBXTargetDependency */,
+			);
+			name = PerqaraRAWGUITests;
+			productName = PerqaraRAWGUITests;
+			productReference = 364ACCCB2A8BC5C50089828F /* PerqaraRAWGUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		364ACCA02A8BC5C40089828F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					364ACCA72A8BC5C40089828F = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					364ACCC02A8BC5C50089828F = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 364ACCA72A8BC5C40089828F;
+					};
+					364ACCCA2A8BC5C50089828F = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 364ACCA72A8BC5C40089828F;
+					};
+				};
+			};
+			buildConfigurationList = 364ACCA32A8BC5C40089828F /* Build configuration list for PBXProject "PerqaraRAWG" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 364ACC9F2A8BC5C40089828F;
+			productRefGroup = 364ACCA92A8BC5C40089828F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				364ACCA72A8BC5C40089828F /* PerqaraRAWG */,
+				364ACCC02A8BC5C50089828F /* PerqaraRAWGTests */,
+				364ACCCA2A8BC5C50089828F /* PerqaraRAWGUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		364ACCA62A8BC5C40089828F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				364ACCBB2A8BC5C50089828F /* LaunchScreen.storyboard in Resources */,
+				364ACCB82A8BC5C50089828F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		364ACCBF2A8BC5C50089828F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		364ACCC92A8BC5C50089828F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		08AD3C136ECF1DBF3AFA8742 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PerqaraRAWG-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		29B41CFDD551811967299028 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PerqaraRAWG-PerqaraRAWGUITests/Pods-PerqaraRAWG-PerqaraRAWGUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PerqaraRAWG-PerqaraRAWGUITests/Pods-PerqaraRAWG-PerqaraRAWGUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PerqaraRAWG-PerqaraRAWGUITests/Pods-PerqaraRAWG-PerqaraRAWGUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E0BC89EAC245D789C9D2235 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PerqaraRAWG/Pods-PerqaraRAWG-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PerqaraRAWG/Pods-PerqaraRAWG-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PerqaraRAWG/Pods-PerqaraRAWG-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE71D776DF90C508C240E2B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PerqaraRAWG-PerqaraRAWGUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6FF2244C382F6F67007875A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PerqaraRAWGTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		364ACCA42A8BC5C40089828F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				364ACCB02A8BC5C40089828F /* ViewController.swift in Sources */,
+				364ACCB62A8BC5C40089828F /* PerqaraRAWG.xcdatamodeld in Sources */,
+				364ACCEA2A8C59A70089828F /* HomeViewModel.swift in Sources */,
+				364ACCF52A8C5C800089828F /* ImageConstant.swift in Sources */,
+				364ACCAC2A8BC5C40089828F /* AppDelegate.swift in Sources */,
+				364ACCEF2A8C59E00089828F /* BaseViewModel.swift in Sources */,
+				364ACCF12A8C5AAC0089828F /* HomeScreen.swift in Sources */,
+				364ACCE32A8BC9350089828F /* TabBarController.swift in Sources */,
+				364ACCAE2A8BC5C40089828F /* SceneDelegate.swift in Sources */,
+				364ACCE82A8C599F0089828F /* HomeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		364ACCBD2A8BC5C50089828F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				364ACCC62A8BC5C50089828F /* PerqaraRAWGTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		364ACCC72A8BC5C50089828F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				364ACCD22A8BC5C50089828F /* PerqaraRAWGUITestsLaunchTests.swift in Sources */,
+				364ACCD02A8BC5C50089828F /* PerqaraRAWGUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		364ACCC32A8BC5C50089828F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 364ACCA72A8BC5C40089828F /* PerqaraRAWG */;
+			targetProxy = 364ACCC22A8BC5C50089828F /* PBXContainerItemProxy */;
+		};
+		364ACCCD2A8BC5C50089828F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 364ACCA72A8BC5C40089828F /* PerqaraRAWG */;
+			targetProxy = 364ACCCC2A8BC5C50089828F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		364ACCB92A8BC5C50089828F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				364ACCBA2A8BC5C50089828F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		364ACCD32A8BC5C50089828F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		364ACCD42A8BC5C50089828F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		364ACCD62A8BC5C50089828F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DE5A4C4F0CBC6A3E0ADCBFD /* Pods-PerqaraRAWG.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PerqaraRAWG/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.assessment.PerqaraRAWG;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		364ACCD72A8BC5C50089828F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F05D4EB982B808348111A27 /* Pods-PerqaraRAWG.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PerqaraRAWG/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.assessment.PerqaraRAWG;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		364ACCD92A8BC5C50089828F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 587787620287D6541987B103 /* Pods-PerqaraRAWGTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.assessment.PerqaraRAWGTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PerqaraRAWG.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PerqaraRAWG";
+			};
+			name = Debug;
+		};
+		364ACCDA2A8BC5C50089828F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEB2DE17453F93E69691D6C9 /* Pods-PerqaraRAWGTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.assessment.PerqaraRAWGTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PerqaraRAWG.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PerqaraRAWG";
+			};
+			name = Release;
+		};
+		364ACCDC2A8BC5C50089828F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3688D240EC6C0059314EE99 /* Pods-PerqaraRAWG-PerqaraRAWGUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.assessment.PerqaraRAWGUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PerqaraRAWG;
+			};
+			name = Debug;
+		};
+		364ACCDD2A8BC5C50089828F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7666DC9FED6D11D4F2A2BC6 /* Pods-PerqaraRAWG-PerqaraRAWGUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.assessment.PerqaraRAWGUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PerqaraRAWG;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		364ACCA32A8BC5C40089828F /* Build configuration list for PBXProject "PerqaraRAWG" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				364ACCD32A8BC5C50089828F /* Debug */,
+				364ACCD42A8BC5C50089828F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		364ACCD52A8BC5C50089828F /* Build configuration list for PBXNativeTarget "PerqaraRAWG" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				364ACCD62A8BC5C50089828F /* Debug */,
+				364ACCD72A8BC5C50089828F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		364ACCD82A8BC5C50089828F /* Build configuration list for PBXNativeTarget "PerqaraRAWGTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				364ACCD92A8BC5C50089828F /* Debug */,
+				364ACCDA2A8BC5C50089828F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		364ACCDB2A8BC5C50089828F /* Build configuration list for PBXNativeTarget "PerqaraRAWGUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				364ACCDC2A8BC5C50089828F /* Debug */,
+				364ACCDD2A8BC5C50089828F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		364ACCB42A8BC5C40089828F /* PerqaraRAWG.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				364ACCB52A8BC5C40089828F /* PerqaraRAWG.xcdatamodel */,
+			);
+			currentVersion = 364ACCB52A8BC5C40089828F /* PerqaraRAWG.xcdatamodel */;
+			path = PerqaraRAWG.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 364ACCA02A8BC5C40089828F /* Project object */;
+}
