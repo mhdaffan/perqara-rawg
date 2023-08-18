@@ -11,7 +11,7 @@ protocol GamesUseCase {
     func searchGames(page: Int, keyword: String, completion: @escaping (Result<GamesListModel, Error>) -> Void)
 }
 
-struct GamesUseCaseImpl: GamesUseCase {
+class GamesUseCaseImpl: GamesUseCase {
     
     @Injected(\.gamesRepository) var gamesRepository: GamesRepository
     

@@ -49,6 +49,11 @@
 		364ACD4A2A8C8BC60089828F /* GamesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364ACD492A8C8BC60089828F /* GamesEndpoint.swift */; };
 		364ACD4C2A8C8CD90089828F /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364ACD4B2A8C8CD90089828F /* DataTransferService.swift */; };
 		364ACD4E2A8C94390089828F /* GamesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364ACD4D2A8C94390089828F /* GamesList.swift */; };
+		366B10022A8EFE0900C3105E /* GamesRepositoryMockImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366B10012A8EFE0900C3105E /* GamesRepositoryMockImpl.swift */; };
+		366B10062A8EFF4400C3105E /* GamesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366B10052A8EFF4300C3105E /* GamesList.swift */; };
+		366B10092A8F020900C3105E /* DataTransferServiceMockImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366B10082A8F020900C3105E /* DataTransferServiceMockImpl.swift */; };
+		366B100C2A8F16A400C3105E /* GamesUseCaseMockImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366B100B2A8F16A400C3105E /* GamesUseCaseMockImpl.swift */; };
+		366B10102A8F17F600C3105E /* HomeViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366B100F2A8F17F600C3105E /* HomeViewModelTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +119,11 @@
 		364ACD492A8C8BC60089828F /* GamesEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesEndpoint.swift; sourceTree = "<group>"; };
 		364ACD4B2A8C8CD90089828F /* DataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferService.swift; sourceTree = "<group>"; };
 		364ACD4D2A8C94390089828F /* GamesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesList.swift; sourceTree = "<group>"; };
+		366B10012A8EFE0900C3105E /* GamesRepositoryMockImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesRepositoryMockImpl.swift; sourceTree = "<group>"; };
+		366B10052A8EFF4300C3105E /* GamesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesList.swift; sourceTree = "<group>"; };
+		366B10082A8F020900C3105E /* DataTransferServiceMockImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferServiceMockImpl.swift; sourceTree = "<group>"; };
+		366B100B2A8F16A400C3105E /* GamesUseCaseMockImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesUseCaseMockImpl.swift; sourceTree = "<group>"; };
+		366B100F2A8F17F600C3105E /* HomeViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTest.swift; sourceTree = "<group>"; };
 		587787620287D6541987B103 /* Pods-PerqaraRAWGTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PerqaraRAWGTests.debug.xcconfig"; path = "Target Support Files/Pods-PerqaraRAWGTests/Pods-PerqaraRAWGTests.debug.xcconfig"; sourceTree = "<group>"; };
 		677B2924754F69C0EB8BA8C2 /* Pods_PerqaraRAWG.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PerqaraRAWG.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DE5A4C4F0CBC6A3E0ADCBFD /* Pods-PerqaraRAWG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PerqaraRAWG.debug.xcconfig"; path = "Target Support Files/Pods-PerqaraRAWG/Pods-PerqaraRAWG.debug.xcconfig"; sourceTree = "<group>"; };
@@ -234,6 +244,11 @@
 		364ACCC42A8BC5C50089828F /* PerqaraRAWGTests */ = {
 			isa = PBXGroup;
 			children = (
+				366B100D2A8F17E500C3105E /* Presentation */,
+				366B100A2A8F168200C3105E /* Mock UseCases */,
+				366B10002A8EFDE100C3105E /* Mock Repositories */,
+				366B10032A8EFEBC00C3105E /* Mock Responses */,
+				366B10072A8F01F800C3105E /* Network */,
 				364ACCC52A8BC5C50089828F /* PerqaraRAWGTests.swift */,
 			);
 			path = PerqaraRAWGTests;
@@ -389,6 +404,62 @@
 				364ACD492A8C8BC60089828F /* GamesEndpoint.swift */,
 			);
 			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		366B10002A8EFDE100C3105E /* Mock Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				366B10012A8EFE0900C3105E /* GamesRepositoryMockImpl.swift */,
+			);
+			path = "Mock Repositories";
+			sourceTree = "<group>";
+		};
+		366B10032A8EFEBC00C3105E /* Mock Responses */ = {
+			isa = PBXGroup;
+			children = (
+				366B10042A8EFEF100C3105E /* Games Endpoint Responses */,
+			);
+			path = "Mock Responses";
+			sourceTree = "<group>";
+		};
+		366B10042A8EFEF100C3105E /* Games Endpoint Responses */ = {
+			isa = PBXGroup;
+			children = (
+				366B10052A8EFF4300C3105E /* GamesList.swift */,
+			);
+			path = "Games Endpoint Responses";
+			sourceTree = "<group>";
+		};
+		366B10072A8F01F800C3105E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				366B10082A8F020900C3105E /* DataTransferServiceMockImpl.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		366B100A2A8F168200C3105E /* Mock UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				366B100B2A8F16A400C3105E /* GamesUseCaseMockImpl.swift */,
+			);
+			path = "Mock UseCases";
+			sourceTree = "<group>";
+		};
+		366B100D2A8F17E500C3105E /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				366B100E2A8F17EA00C3105E /* Home */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		366B100E2A8F17EA00C3105E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				366B100F2A8F17F600C3105E /* HomeViewModelTest.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		BBD38DF81F6D336AD23CDF92 /* Frameworks */ = {
@@ -680,7 +751,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				366B10092A8F020900C3105E /* DataTransferServiceMockImpl.swift in Sources */,
+				366B10102A8F17F600C3105E /* HomeViewModelTest.swift in Sources */,
 				364ACCC62A8BC5C50089828F /* PerqaraRAWGTests.swift in Sources */,
+				366B10022A8EFE0900C3105E /* GamesRepositoryMockImpl.swift in Sources */,
+				366B100C2A8F16A400C3105E /* GamesUseCaseMockImpl.swift in Sources */,
+				366B10062A8EFF4400C3105E /* GamesList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -846,8 +922,7 @@
 				INFOPLIST_FILE = PerqaraRAWG/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -874,8 +949,7 @@
 				INFOPLIST_FILE = PerqaraRAWG/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -899,13 +973,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.assessment.PerqaraRAWGTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PerqaraRAWG.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PerqaraRAWG";
 			};
 			name = Debug;
@@ -919,13 +996,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.assessment.PerqaraRAWGTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PerqaraRAWG.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PerqaraRAWG";
 			};
 			name = Release;
@@ -938,12 +1018,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.assessment.PerqaraRAWGUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = PerqaraRAWG;
 			};
 			name = Debug;
@@ -956,12 +1041,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.assessment.PerqaraRAWGUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = PerqaraRAWG;
 			};
 			name = Release;
