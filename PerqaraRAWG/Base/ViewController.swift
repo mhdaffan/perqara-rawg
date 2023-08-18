@@ -67,9 +67,9 @@ class ViewController: UIViewController {
     
     func pullToRefresh(isRefreshing: Bool) {
         if isRefreshing {
-            endRefreshing()
-        } else {
             beginRefreshing()
+        } else {
+            endRefreshing()
         }
     }
     

@@ -65,6 +65,7 @@ final class GameDetailViewController: ViewController {
             if let game = self?.viewModel.gameDetail {
                 self?.contentView.updateUI(game: game)
                 self?.contentView.isHidden = false
+                self?.updateFavoriteButton()
             }
         }
         
@@ -77,9 +78,23 @@ final class GameDetailViewController: ViewController {
         }
     }
     
-    @objc func tapFavoriteButton() {
+    func updateFavoriteButton() {
+        let icon: UIImage? = viewModel.isFavorite() ? .icLove : .icLoveOutlined
         removeRightBarButtonItem()
-        addRightBarButtonItem(image: .icLove, tintColor: .black, action: #selector(tapFavoriteButton))
+        addRightBarButtonItem(image: icon, tintColor: .black, action: #selector(tapFavoriteButton))
+    }
+    
+    @objc func tapFavoriteButton() {
+        guard let game = viewModel.gameDetail else {
+            return
+        }
+        
+        if viewModel.isFavorite() {
+            viewModel.removeFromFavorite()
+        } else {
+            viewModel.saveToFavorite(game: game)
+        }
+        updateFavoriteButton()
     }
     
 }

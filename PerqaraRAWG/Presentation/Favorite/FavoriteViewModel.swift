@@ -7,10 +7,13 @@
 
 final class FavoriteViewModel: BaseViewModel {
     
-    var data: GamesListModel = GamesListModel(page: 1, games: [])
+    @Injected(\.coreDataUseCase) var coreDataUseCase: CoreDataUseCase
+    
+    var data: [GameDetailModel] = []
     
     func getFavoriteGames() {
-        
+        data = coreDataUseCase.getFavoriteGames()
+        refreshData?()
     }
     
 }

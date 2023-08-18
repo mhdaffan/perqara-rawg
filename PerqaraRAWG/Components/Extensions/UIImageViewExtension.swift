@@ -10,7 +10,7 @@ import UIKit
 
 extension UIImageView {
     
-    func setImageURL(urlString: String, placeholder: String, contentMode: UIView.ContentMode = .scaleToFill) {
+    func setImageURL(urlString: String, placeholder: String = "ic_logo", contentMode: UIView.ContentMode = .scaleToFill) {
         let url = URL(string: urlString)
         let placeholder = Image(named: placeholder)
         

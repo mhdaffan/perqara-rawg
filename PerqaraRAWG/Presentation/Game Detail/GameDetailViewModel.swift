@@ -8,6 +8,7 @@
 final class GameDetailViewModel: BaseViewModel {
     
     @Injected(\.gamesUseCase) var gamesUseCase: GamesUseCase
+    @Injected(\.coreDataUseCase) var coreDataUseCase: CoreDataUseCase
     
     var gameDetail: GameDetailModel?
     
@@ -29,6 +30,18 @@ final class GameDetailViewModel: BaseViewModel {
                 self?.onError?(error)
             }
         }
+    }
+    
+    func isFavorite() -> Bool {
+        coreDataUseCase.getFavoriteGame(id: id) != nil
+    }
+    
+    func removeFromFavorite() {
+        coreDataUseCase.deleteFavoriteGame(id: id)
+    }
+    
+    func saveToFavorite(game: GameDetailModel) {
+        coreDataUseCase.saveToFavoriteGame(game: game)
     }
     
 }

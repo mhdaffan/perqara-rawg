@@ -24,6 +24,14 @@ final class FavoriteViewController: ViewController {
         $0.delegate = self
         $0.dataSource = self
     }
+    let emptyLabel = UILabel().then {
+        $0.text = "There are no favorite games"
+        $0.textAlignment = .center
+        $0.textColor = .black
+        $0.font = .boldSystemFont(ofSize: 30)
+        $0.numberOfLines = 0
+        $0.isHidden = true
+    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -38,6 +46,7 @@ final class FavoriteViewController: ViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.tabBarController?.tabBar.isHidden = false
+        viewModel.getFavoriteGames()
     }
     
     private func configureUI() {
@@ -48,20 +57,26 @@ final class FavoriteViewController: ViewController {
         navigationController?.navigationBar.backgroundColor = .white
         navigationItem.hidesSearchBarWhenScrolling = false
         
-        view.addSubview(tableView)
+        view.addSubviews(tableView, emptyLabel)
         tableView.snp.makeConstraints {
             $0.edges.equalToSuperview()
+        }
+        emptyLabel.snp.makeConstraints {
+            $0.centerX.centerY.equalToSuperview()
+            $0.leading.trailing.equalToSuperview().inset(32)
         }
     }
     
     private func observeClosures() {
         viewModel.refreshData = { [weak self] in
-            self?.tableView.reloadData()
+            self?.updateUI()
         }
-        
-        viewModel.onError = { [weak self] _ in
-            self?.showErrorAlert(message: "Terjadi Kesalahan, Silahkan Coba Lagi")
-        }
+    }
+    
+    func updateUI() {
+        emptyLabel.isHidden = !viewModel.data.isEmpty
+        tableView.isHidden = viewModel.data.isEmpty
+        tableView.reloadData()
     }
     
 }
@@ -69,21 +84,21 @@ final class FavoriteViewController: ViewController {
 extension FavoriteViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = GameDetailScreen.build(id: viewModel.data.games[indexPath.row].id)
+        let vc = GameDetailScreen.build(id: viewModel.data[indexPath.row].id)
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.data.games.count
+        return viewModel.data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath, cell: GameItemTableViewCell.self)
-        let cellModel = viewModel.data.games[indexPath.row]
+        let cellModel = viewModel.data[indexPath.row]
         
         cell.selectionStyle = .none
         cell.updateUI(
-            imageUrl: cellModel.backgroundImage ?? "",
+            imageUrl: cellModel.backgroundImage,
             title: cellModel.name,
             releaseDate: cellModel.released ?? String(),
             rating: String(cellModel.rating))

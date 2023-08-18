@@ -68,7 +68,7 @@ final class GameItemTableViewCell: UITableViewCell {
     }
     
     func updateUI(imageUrl: String, title: String, releaseDate: String, rating: String) {
-        iconImageView.setImageURL(urlString: imageUrl, placeholder: "")
+        iconImageView.setImageURL(urlString: imageUrl)
         titleLabel.text = title
         releaseLabel.text = "Released date " + releaseDate
         ratingLabel.text = rating

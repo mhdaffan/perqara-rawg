@@ -98,7 +98,7 @@ final class GameDetailView: UIView {
     }
     
     func updateUI(game: GameDetailModel) {
-        imageView.setImageURL(urlString: game.backgroundImage, placeholder: "")
+        imageView.setImageURL(urlString: game.backgroundImage)
         publisherLabel.text = game.publisherString
         titleLabel.text = game.name
         releaseLabel.text = "Released date " + (game.released ?? "")
