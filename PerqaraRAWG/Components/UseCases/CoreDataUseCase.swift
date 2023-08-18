@@ -12,7 +12,7 @@ protocol CoreDataUseCase {
     func deleteFavoriteGame(id: Int)
 }
 
-struct CoreDataUseCaseImpl: CoreDataUseCase {
+class CoreDataUseCaseImpl: CoreDataUseCase {
     
     @Injected(\.coreDataRepository) var coreDataRepository: CoreDataRepository
     

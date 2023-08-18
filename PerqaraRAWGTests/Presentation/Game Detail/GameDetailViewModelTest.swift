@@ -10,7 +10,8 @@ import XCTest
 
 final class GameDetailViewModelTest: XCTestCase {
     
-    private lazy var gamesRepository = GamesRepositoryMockImpl()
+    private var gamesRepository = GamesRepositoryMockImpl()
+    private var coreDataRepository = CoreDataRepositoryMockImpl()
     
     func test_fetchGameDetail_expectError() {
         let sut = makeSUT()
@@ -45,6 +46,23 @@ final class GameDetailViewModelTest: XCTestCase {
             XCTAssertEqual(sut.gameDetail?.id, 4435)
             XCTAssertEqual(sut.gameDetail?.name, "MotorStorm RC")
         })
+    }
+    
+    func test_removeFromFavorite() {
+        let sut = makeSUT()
+        sut.saveToFavorite(game: GameDetailModel.mockModel())
+        
+        sut.removeFromFavorite()
+        
+        XCTAssertFalse(sut.isFavorite())
+    }
+    
+    func test_saveToFavorite() {
+        let sut = makeSUT()
+        
+        sut.saveToFavorite(game: GameDetailModel.mockModel())
+        
+        XCTAssertTrue(sut.isFavorite())
     }
     
     func makeSUT(file: StaticString = #file, line: UInt = #line) -> GameDetailViewModel {

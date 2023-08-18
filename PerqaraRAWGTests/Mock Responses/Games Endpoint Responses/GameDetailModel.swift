@@ -61,4 +61,8 @@ extension GameDetailModel {
         return Data(jsonString)
     }
     
+    static func mockModel() -> GameDetailModel {
+        return try! JSONDecoder().decode(GameDetailModel.self, from: GameDetailModel.mock())
+    }
+    
 }
