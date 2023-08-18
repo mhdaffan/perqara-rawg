@@ -9,5 +9,7 @@ class BaseViewModel {
     
     var onError: ((Error) -> Void)?
     var refreshData: (() -> Void)?
+    var pullToRefresh: ((Bool) -> Void)?
+    var paginationRefresh: ((Bool) -> Void)?
     
 }

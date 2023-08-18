@@ -18,7 +18,9 @@ final class GameDetailViewModel: BaseViewModel {
     }
     
     func fetchGameDetail() {
+        pullToRefresh?(true)
         gamesUseCase.fetchGameDetail(id: id) { [weak self] response in
+            self?.pullToRefresh?(false)
             switch response {
             case .success(let game):
                 self?.gameDetail = game

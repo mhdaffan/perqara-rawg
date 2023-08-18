@@ -64,5 +64,13 @@ class ViewController: UIViewController {
     func beginRefreshing() {
         refreshControl.beginRefreshing()
     }
-
+    
+    func pullToRefresh(isRefreshing: Bool) {
+        if isRefreshing {
+            endRefreshing()
+        } else {
+            beginRefreshing()
+        }
+    }
+    
 }

@@ -19,7 +19,7 @@ final class GameDetailViewController: ViewController {
         $0.isHidden = true
     }
     
-    private let viewModel: GameDetailViewModel
+    let viewModel: GameDetailViewModel
     
     init(viewModel: GameDetailViewModel) {
         self.viewModel = viewModel
@@ -34,7 +34,7 @@ final class GameDetailViewController: ViewController {
         super.viewDidLoad()
         configureUI()
         observeClosures()
-        fetchGameDetail()
+        refresh()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -62,7 +62,6 @@ final class GameDetailViewController: ViewController {
     
     private func observeClosures() {
         viewModel.refreshData = { [weak self] in
-            self?.endRefreshing()
             if let game = self?.viewModel.gameDetail {
                 self?.contentView.updateUI(game: game)
                 self?.contentView.isHidden = false
@@ -70,14 +69,12 @@ final class GameDetailViewController: ViewController {
         }
         
         viewModel.onError = { [weak self] _ in
-            self?.endRefreshing()
             self?.showErrorAlert(message: "Terjadi Kesalahan, Silahkan Coba Lagi")
         }
-    }
-    
-    func fetchGameDetail() {
-        beginRefreshing()
-        viewModel.fetchGameDetail()
+        
+        viewModel.pullToRefresh = { [weak self] refreshing in
+            self?.pullToRefresh(isRefreshing: refreshing)
+        }
     }
     
     @objc func tapFavoriteButton() {

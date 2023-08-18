@@ -12,11 +12,6 @@ final class HomeViewModelTest: XCTestCase {
     
     private lazy var gamesRepository = GamesRepositoryMockImpl()
     
-    override func setUp() {
-        super.setUp()
-        
-    }
-    
     func test_getGamesList_expectError() {
         let sut = makeSUT()
         let exp = expectation(description: "waiting for response")
@@ -92,6 +87,23 @@ final class HomeViewModelTest: XCTestCase {
         
         XCTAssertEqual(sut.data.page, 1)
         XCTAssertTrue(sut.data.games.isEmpty)
+    }
+    
+    func test_startLoading_withFirstPage() {
+        let sut = makeSUT()
+        let exp = expectation(description: "waiting for trigger")
+        var refreshing = false
+        
+        sut.pullToRefresh = { _refreshing in
+            refreshing = _refreshing
+            exp.fulfill()
+        }
+        
+        sut.startLoading(page: 1)
+        
+        waitForExpectations(timeout: 0.1, handler: { _ in
+            XCTAssertTrue(refreshing)
+        })
     }
     
     func makeSUT(file: StaticString = #file, line: UInt = #line) -> HomeViewModel {

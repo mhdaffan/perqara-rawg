@@ -13,11 +13,15 @@ final class HomeViewModel: BaseViewModel {
     private var gamesList: GamesListModel = GamesListModel(page: 1, games: [])
     
     func getGamesList() {
-        guard gamesList.page > 0 else {
+        let page = gamesList.page
+        guard page > 0 else {
             return
         }
         
-        gamesUseCase.fetchGamesList(page: gamesList.page) { [weak self] response in
+        startLoading(page: page)
+        gamesUseCase.fetchGamesList(page: page) { [weak self] response in
+            self?.pullToRefresh?(false)
+            self?.paginationRefresh?(false)
             switch response {
             case .success(let gamesList):
                 self?.gamesList.page = gamesList.page
@@ -31,11 +35,15 @@ final class HomeViewModel: BaseViewModel {
     }
     
     func searchGames(keyword: String) {
-        guard gamesList.page > 0 else {
+        let page = gamesList.page
+        guard page > 0 else {
             return
         }
         
-        gamesUseCase.searchGames(page: gamesList.page, keyword: keyword) { [weak self] response in
+        startLoading(page: page)
+        gamesUseCase.searchGames(page: page, keyword: keyword) { [weak self] response in
+            self?.pullToRefresh?(false)
+            self?.paginationRefresh?(false)
             switch response {
             case .success(let gamesList):
                 self?.data.page = gamesList.page
@@ -44,6 +52,14 @@ final class HomeViewModel: BaseViewModel {
             case .failure(let error):
                 self?.onError?(error)
             }
+        }
+    }
+    
+    func startLoading(page: Int) {
+        if page == 1 {
+            pullToRefresh?(true)
+        } else {
+            paginationRefresh?(true)
         }
     }
     
