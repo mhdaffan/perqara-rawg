@@ -54,6 +54,7 @@
 		366B10092A8F020900C3105E /* DataTransferServiceMockImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366B10082A8F020900C3105E /* DataTransferServiceMockImpl.swift */; };
 		366B100C2A8F16A400C3105E /* GamesUseCaseMockImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366B100B2A8F16A400C3105E /* GamesUseCaseMockImpl.swift */; };
 		366B10102A8F17F600C3105E /* HomeViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366B100F2A8F17F600C3105E /* HomeViewModelTest.swift */; };
+		36B171C52A8F295D001D4FB8 /* GameItemTableViewCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B171C42A8F295D001D4FB8 /* GameItemTableViewCellTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +125,7 @@
 		366B10082A8F020900C3105E /* DataTransferServiceMockImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferServiceMockImpl.swift; sourceTree = "<group>"; };
 		366B100B2A8F16A400C3105E /* GamesUseCaseMockImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesUseCaseMockImpl.swift; sourceTree = "<group>"; };
 		366B100F2A8F17F600C3105E /* HomeViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTest.swift; sourceTree = "<group>"; };
+		36B171C42A8F295D001D4FB8 /* GameItemTableViewCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameItemTableViewCellTest.swift; sourceTree = "<group>"; };
 		587787620287D6541987B103 /* Pods-PerqaraRAWGTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PerqaraRAWGTests.debug.xcconfig"; path = "Target Support Files/Pods-PerqaraRAWGTests/Pods-PerqaraRAWGTests.debug.xcconfig"; sourceTree = "<group>"; };
 		677B2924754F69C0EB8BA8C2 /* Pods_PerqaraRAWG.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PerqaraRAWG.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DE5A4C4F0CBC6A3E0ADCBFD /* Pods-PerqaraRAWG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PerqaraRAWG.debug.xcconfig"; path = "Target Support Files/Pods-PerqaraRAWG/Pods-PerqaraRAWG.debug.xcconfig"; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 		364ACCC42A8BC5C50089828F /* PerqaraRAWGTests */ = {
 			isa = PBXGroup;
 			children = (
+				36B171C22A8F2950001D4FB8 /* Components */,
 				366B100D2A8F17E500C3105E /* Presentation */,
 				366B100A2A8F168200C3105E /* Mock UseCases */,
 				366B10002A8EFDE100C3105E /* Mock Repositories */,
@@ -460,6 +463,22 @@
 				366B100F2A8F17F600C3105E /* HomeViewModelTest.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		36B171C22A8F2950001D4FB8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				36B171C32A8F2956001D4FB8 /* Cells */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		36B171C32A8F2956001D4FB8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				36B171C42A8F295D001D4FB8 /* GameItemTableViewCellTest.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		BBD38DF81F6D336AD23CDF92 /* Frameworks */ = {
@@ -756,6 +775,7 @@
 				364ACCC62A8BC5C50089828F /* PerqaraRAWGTests.swift in Sources */,
 				366B10022A8EFE0900C3105E /* GamesRepositoryMockImpl.swift in Sources */,
 				366B100C2A8F16A400C3105E /* GamesUseCaseMockImpl.swift in Sources */,
+				36B171C52A8F295D001D4FB8 /* GameItemTableViewCellTest.swift in Sources */,
 				366B10062A8EFF4400C3105E /* GamesList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
